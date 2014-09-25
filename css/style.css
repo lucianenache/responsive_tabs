@@ -1,0 +1,155 @@
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  text-align: left;
+  font-family: 'PT Sans Narrow';
+  color: #fefef8;
+  background: #9ea738;
+}
+
+
+.tabs {
+  width: 650px;
+  float: none;
+  list-style: none;
+  position: relative;
+  margin: 0 0 0 50%;
+  text-align: left;
+}
+
+.tabs li {
+  float: left;
+  display: block;
+}
+
+.tabs input[type="radio"] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.tabs label:hover {
+  background: #262a00;
+}
+
+/*desktop begin*/
+@media only screen and (min-device-width: 769px) {
+  .tabs label {
+    display: block;
+    padding: 14px 21px;
+    border-radius: 2px 2px 0 0;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    background: #545c01;
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .tabs .tab-content {
+    z-index: 2;
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    font-size: 17px;
+    line-height: 25px;
+    padding: 10px;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    background: black;
+  }
+
+  p {
+    margin: 0 0 15px 0;
+  }
+
+  p.link {
+    clear: both;
+    margin: 380px 0 0 15px;
+  }
+  p.link a {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    /*padding: 5px 10px;*/
+    margin: 0 5px;
+    background-color: black;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  p.link a:hover {
+    background-color: black;
+  }
+
+}
+/*end of desktop*/
+
+/*768 begin*/
+@media only screen and (max-device-width: 768px) {
+  /*add accordion stuff here*/
+
+
+
+  .tabs {
+    margin:100px auto;
+    padding:0;
+    width:100%;
+
+  } 
+  
+  .tabs li {
+    list-style:none;
+    width:100%;
+  } 
+  
+  .tabs  li label {
+    padding:10px;
+    display:block;
+    font-family: 'Bree Serif', 'serif';
+    font-size:30px;
+    line-height:30px;
+    color:#d5d5d5;
+    background-color:#545c01;
+  } 
+  
+  .tabs .tab-content {
+    z-index: 1;
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    font-size: 17px;
+    line-height: 25px;
+    padding: 20px;
+    top: 53px;
+    left: 0;
+    background: black;
+  }
+
+  } /*end of 768*/
+
+  .tabs [id^="tab"]:checked + label {
+    top: 0;
+    padding-top: 17px;
+    background: #0f1000;
+  }
+  .tabs [id^="tab"]:checked ~ [id^="tab-content"] {
+    display: block;
+  }
