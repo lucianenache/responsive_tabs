@@ -1,36 +1,15 @@
 
 
-  .tabs {
-    margin:100px auto;
-    padding:0;
-    width:100% !important; 
-
-  } 
+.tabs {
+    omargin: 100px auto;
+    padding: 0;
+    width: 100%; 
+} 
   
-  .tabs li {
+.tabs li {
     list-style:none;
-    width:100% !important; 
-  } 
+     width:100%;
+} 
   
-  .tabs  li label {
-    padding:10px;
-    display:block;
-    font-family: 'Bree Serif', 'serif';
-    font-size:30px;
-    line-height:30px;
-    color:#d5d5d5;
-    background-color:#545c01;
-  } 
   
-  .tabs .tab-content {
-   
-    display: none;
-    overflow: hidden;
-    gwidth: 1%;
-    font-size: 17px;
-    line-height: 25px;
-    padding: 20px;
-    top: 53px;
-    left: 0;
-    background: black;
-  }
+
